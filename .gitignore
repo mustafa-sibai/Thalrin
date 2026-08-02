@@ -77,3 +77,6 @@ $RECYCLE.BIN/
 
 # NFS temporary files
 .nfs*
+
+.vs
+Output

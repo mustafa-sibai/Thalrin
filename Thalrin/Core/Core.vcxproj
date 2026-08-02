@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\API.h" />
+    <ClInclude Include="Core\Debug.h" />
+    <ClInclude Include="Core\Engine.h" />
+    <ClInclude Include="Core\Input\Keyboard.h" />
+    <ClInclude Include="Core\Input\Mouse.h" />
+    <ClInclude Include="Core\Math\Math.h" />
+    <ClInclude Include="Core\Math\Mathf.h" />
+    <ClInclude Include="Core\Math\Rectangle.h" />
+    <ClInclude Include="Core\Math\Vector2.h" />
+    <ClInclude Include="Core\Math\Vector3.h" />
+    <ClInclude Include="Core\Math\Vector4.h" />
+    <ClInclude Include="Core\Platform\Windows\Window.h" />
+    <ClInclude Include="Core\Platform\Windows\WindowsUtils.h" />
+    <ClInclude Include="Core\Scene\Scene.h" />
+    <ClInclude Include="Core\Scene\SceneManager.h" />
+    <ClInclude Include="Core\Time.h" />
+    <ClInclude Include="Core\Timer.h" />
+    <ClInclude Include="Core\Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Debug.cpp" />
+    <ClCompile Include="Core\Engine.cpp" />
+    <ClCompile Include="Core\Input\Keyboard.cpp" />
+    <ClCompile Include="Core\Input\Mouse.cpp" />
+    <ClCompile Include="Core\Math\Mathf.cpp" />
+    <ClCompile Include="Core\Math\Rectangle.cpp" />
+    <ClCompile Include="Core\Math\Vector2.cpp" />
+    <ClCompile Include="Core\Math\Vector3.cpp" />
+    <ClCompile Include="Core\Math\Vector4.cpp" />
+    <ClCompile Include="Core\Platform\Windows\Window.cpp" />
+    <ClCompile Include="Core\Scene\Scene.cpp" />
+    <ClCompile Include="Core\Scene\SceneManager.cpp" />
+    <ClCompile Include="Core\Time.cpp" />
+    <ClCompile Include="Core\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\Math\Mathf.inl" />
+    <None Include="Core\Math\Vector2.inl" />
+    <None Include="Core\Math\Vector3.inl" />
+    <None Include="Core\Math\Vector4.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{68c7fdeb-c08d-4019-b9f8-04542ea94afc}</ProjectGuid>
+    <RootNamespace>Core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
+
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
+
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
+
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
+
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

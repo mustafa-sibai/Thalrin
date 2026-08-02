@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Core/Core.vcxproj" Id="68c7fdeb-c08d-4019-b9f8-04542ea94afc" />
+  <Project Path="Editor/Editor.vcxproj" Id="a50a8dfa-cc6d-4e67-9c94-c55795186310">
+    <BuildDependency Project="Core/Core.vcxproj" />
+  </Project>
+</Solution>
