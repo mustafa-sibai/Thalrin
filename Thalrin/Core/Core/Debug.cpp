@@ -32,27 +32,6 @@ void Debug::InitializeLogFile()
 	}
 }
 
-void Debug::LogInfo(const std::string& message)
-{
-	Log(message, "INFO", FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE, std::cout);
-}
-
-void Debug::LogWarning(const std::string& message)
-{
-	Log(message, "WARNING", FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN, std::cout);
-}
-
-void Debug::LogError(const std::string& message)
-{
-	Log(message, "ERROR", FOREGROUND_INTENSITY | FOREGROUND_RED, std::cerr);
-}
-
-void Debug::LogFatal(const std::string& message)
-{
-	Log(message, "FATAL", FOREGROUND_INTENSITY | FOREGROUND_RED, std::cerr);
-	exit(EXIT_FAILURE);
-}
-
 void Debug::Log(const std::string& message, const std::string& level, WORD color, std::ostream& outputStream)
 {
 	if (!initialized)
@@ -71,7 +50,7 @@ void Debug::Log(const std::string& message, const std::string& level, WORD color
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, color);
 	outputStream << "[" << timeBuffer << "] [" << level << "] " << message << std::endl;
-	SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Reset to default color
+	SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
 	if (logFile.is_open())
 	{
