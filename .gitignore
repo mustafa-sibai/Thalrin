@@ -13,7 +13,6 @@
 *.dll
 
 # Executables
-*.exe
 *.out
 
 # Linker output

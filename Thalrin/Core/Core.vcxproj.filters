@@ -230,4 +230,8 @@
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Core\Shaders\triangle-shader.frag" />
+    <CustomBuild Include="Core\Shaders\triangle-shader.vert" />
+  </ItemGroup>
 </Project>

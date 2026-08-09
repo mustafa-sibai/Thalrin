@@ -67,6 +67,36 @@
     <None Include="Core\Math\Vector2.inl" />
     <None Include="Core\Math\Vector3.inl" />
     <None Include="Core\Math\Vector4.inl" />
+    <CustomBuild Include="Core\Shaders\triangle-shader.frag">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BuildInParallel>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BuildInParallel>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Core\Shaders\triangle-shader.vert">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BuildInParallel>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BuildInParallel>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
