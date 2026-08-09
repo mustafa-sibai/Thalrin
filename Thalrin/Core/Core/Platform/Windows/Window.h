@@ -24,7 +24,8 @@ namespace Core::Platform::Windows
 		void Update();
 
 		inline bool IsOpen() { return isWindowOpen; }
-		const HWND& GetHWND() const { return hWnd; }
+		HWND GetHWND() const { return hWnd; }
+		HINSTANCE GetInstance() const { return hInstance; }
 		int GetWidth() const { return Width; }
 		int GetHeight() const { return Height; }
 		float GetAspectRatio() const { return (float)Width / (float)Height; }

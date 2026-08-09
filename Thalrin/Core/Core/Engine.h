@@ -1,22 +1,33 @@
 #pragma once
 #include <chrono>
-#include "Core/Time.h"
-#include "Core/Platform/Windows/Window.h"
-#include "Core/Scene/SceneManager.h"
-#include "Core/Input/Keyboard.h"
-#include "Core/Input/Mouse.h"
-#include "Core/API.h"
+#include <Core/Time.h>
+#include <Core/Platform/Windows/Window.h>
+#include <Core/Platform/Windows/VulkanSurface.h>
+#include <Core/Graphics/API/Vulkan/VulkanDevice.h>
+#include <Core/Graphics/API/Vulkan/Swapchain.h>
+#include <Core/Graphics/API/Vulkan/RenderPass.h>
+#include <Core/Scene/SceneManager.h>
+#include <Core/Input/Keyboard.h>
+#include <Core/Input/Mouse.h>
+#include <Core/API.h>
 
 namespace Core
 {
 	using namespace Core::Platform::Windows;
 	using namespace Core::Input;
 	using namespace Core::SceneManagement;
+	using namespace Core::Graphics::API::Vulkan;
 
 	class CORE_API Engine
 	{
 	private:
 		Window window;
+
+		VulkanDevice vulkanDevice;
+		VulkanSurface vulkanSurface;
+		Swapchain swapchain;
+		RenderPass renderPass;
+
 		SceneManager sceneManager;
 		Keyboard keyboard;
 		Mouse mouse;

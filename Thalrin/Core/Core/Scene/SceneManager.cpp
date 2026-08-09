@@ -6,12 +6,10 @@ namespace Core::SceneManagement
 {
 	SceneManager::SceneManager()
 		: m_currentSceneIndex(0)
-	{
-	}
+	{}
 
 	SceneManager::~SceneManager()
-	{
-	}
+	{}
 
 	void SceneManager::AddScene(Scene* scene)
 	{
@@ -22,7 +20,7 @@ namespace Core::SceneManagement
 	{
 		if (sceneIndex < 0 || sceneIndex >= static_cast<int>(m_scenes.size()))
 		{
-			Debug::LogFatal("Scene index out of range: " + std::to_string(sceneIndex));
+			Debug::LogFatal("Scene index out of range: {}", sceneIndex);
 		}
 
 		delete m_scenes[sceneIndex];
@@ -33,7 +31,7 @@ namespace Core::SceneManagement
 	{
 		if (sceneIndex < 0 || sceneIndex >= static_cast<int>(m_scenes.size()))
 		{
-			Debug::LogFatal("Scene index out of range: " + std::to_string(sceneIndex));
+			Debug::LogFatal("Scene index out of range: {}", sceneIndex);
 		}
 
 		m_currentSceneIndex = sceneIndex;
