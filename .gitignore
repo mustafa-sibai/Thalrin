@@ -12,10 +12,6 @@
 *.dylib
 *.dll
 
-# Static libraries
-*.a
-*.lib
-
 # Executables
 *.exe
 *.out
@@ -80,3 +76,4 @@ $RECYCLE.BIN/
 
 .vs
 Output
+logs
