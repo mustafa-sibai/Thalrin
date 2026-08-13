@@ -117,6 +117,12 @@
     <ClInclude Include="Core\Graphics\API\Vulkan\RenderPass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Core\IO\FileReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Graphics\API\Vulkan\Pipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Math\Mathf.cpp">
@@ -201,6 +207,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Core\Graphics\API\Vulkan\RenderPass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\IO\FileReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Graphics\API\Vulkan\Pipeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -6,6 +6,7 @@
 #include <Core/Graphics/API/Vulkan/VulkanDevice.h>
 #include <Core/Graphics/API/Vulkan/Swapchain.h>
 #include <Core/Graphics/API/Vulkan/RenderPass.h>
+#include <Core/Graphics/API/Vulkan/Pipeline.h>
 #include <Core/Scene/SceneManager.h>
 #include <Core/Input/Keyboard.h>
 #include <Core/Input/Mouse.h>
@@ -27,6 +28,7 @@ namespace Core
 		VulkanSurface vulkanSurface;
 		Swapchain swapchain;
 		RenderPass renderPass;
+		Pipeline pipeline;
 
 		SceneManager sceneManager;
 		Keyboard keyboard;

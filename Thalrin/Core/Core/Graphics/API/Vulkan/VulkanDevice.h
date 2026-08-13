@@ -1,4 +1,4 @@
-#pragma once
+	#pragma once
 #include <vulkan/vulkan.h>
 #include <vector>
 #include <Core/API.h>
@@ -35,7 +35,7 @@ namespace Core::Graphics::API::Vulkan
 		void CreateCommandPool();
 		void CreateCommandBuffers(uint32_t count);
 		void CreateSyncObjects(uint32_t frameCount);
-		void DrawFrame(VkSwapchainKHR swapchain, VkRenderPass renderPass, std::vector<VkFramebuffer>& framebuffers, VkExtent2D extent);
+		void DrawFrame(VkSwapchainKHR swapchain, VkRenderPass renderPass, std::vector<VkFramebuffer>& framebuffers, VkExtent2D extent, VkPipeline pipeline);
 
 		VkInstance GetInstance() const { return instance; }
 		VkPhysicalDevice GetPhysicalDevice() const { return physicalDevice; }

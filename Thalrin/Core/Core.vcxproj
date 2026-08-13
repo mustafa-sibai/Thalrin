@@ -22,9 +22,11 @@
     <ClInclude Include="Core\API.h" />
     <ClInclude Include="Core\Debug.h" />
     <ClInclude Include="Core\Engine.h" />
+    <ClInclude Include="Core\Graphics\API\Vulkan\Pipeline.h" />
     <ClInclude Include="Core\Graphics\API\Vulkan\RenderPass.h" />
     <ClInclude Include="Core\Input\Keyboard.h" />
     <ClInclude Include="Core\Input\Mouse.h" />
+    <ClInclude Include="Core\IO\FileReader.h" />
     <ClInclude Include="Core\Math\Math.h" />
     <ClInclude Include="Core\Math\Mathf.h" />
     <ClInclude Include="Core\Math\Rectangle.h" />
@@ -45,10 +47,12 @@
   <ItemGroup>
     <ClCompile Include="Core\Debug.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
+    <ClCompile Include="Core\Graphics\API\Vulkan\Pipeline.cpp" />
     <ClCompile Include="Core\Graphics\API\Vulkan\RenderPass.cpp" />
     <ClCompile Include="Core\Graphics\API\Vulkan\Swapchain.cpp" />
     <ClCompile Include="Core\Input\Keyboard.cpp" />
     <ClCompile Include="Core\Input\Mouse.cpp" />
+    <ClCompile Include="Core\IO\FileReader.cpp" />
     <ClCompile Include="Core\Math\Mathf.cpp" />
     <ClCompile Include="Core\Math\Rectangle.cpp" />
     <ClCompile Include="Core\Math\Vector2.cpp" />

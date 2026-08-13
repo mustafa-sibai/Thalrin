@@ -26,6 +26,8 @@ namespace Core
 		vulkanDevice.CreateCommandPool();
 		vulkanDevice.CreateCommandBuffers(swapchain.GetImageCount());
 		vulkanDevice.CreateSyncObjects(swapchain.GetImageCount());
+		pipeline.Create(vulkanDevice.GetLogicalDevice(), renderPass.GetRenderPass(), swapchain.GetExtent(),
+			"Shaders/triangle-shader.vert.spv", "Shaders/triangle-shader.frag.spv");
 
 		sceneManager.LoadScene(0);
 
@@ -42,7 +44,8 @@ namespace Core
 				swapchain.GetSwapchain(),
 				renderPass.GetRenderPass(),
 				swapchain.GetFramebuffers(),
-				swapchain.GetExtent());
+				swapchain.GetExtent(),
+				pipeline.GetPipeline());
 
 			sceneManager.Render();
 		}

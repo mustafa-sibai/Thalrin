@@ -117,7 +117,9 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,7 +146,9 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -169,7 +173,9 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -196,7 +202,9 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

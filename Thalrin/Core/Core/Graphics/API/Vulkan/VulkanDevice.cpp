@@ -236,7 +236,7 @@ namespace Core::Graphics::API::Vulkan
 	}
 
 	void VulkanDevice::DrawFrame(VkSwapchainKHR swapchain, VkRenderPass renderPass,
-		std::vector<VkFramebuffer>& framebuffers, VkExtent2D extent)
+		std::vector<VkFramebuffer>& framebuffers, VkExtent2D extent, VkPipeline pipeline)
 	{
 		// 1. Wait for previous frame
 		vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
@@ -255,7 +255,7 @@ namespace Core::Graphics::API::Vulkan
 		beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 		vkBeginCommandBuffer(cmd, &beginInfo);
 
-		VkClearValue clearColor = { {{0.75f, 0.0f, 0.0f, 1.0f}} };
+		VkClearValue clearColor = { {{0.0f, 0.0f, 0.0f, 1.0f}} };
 
 		VkRenderPassBeginInfo renderPassInfo{};
 		renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
@@ -267,7 +267,11 @@ namespace Core::Graphics::API::Vulkan
 		renderPassInfo.pClearValues = &clearColor;
 
 		vkCmdBeginRenderPass(cmd, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-		// draw here
+		
+		//Draw here
+		vkCmdBindPipeline(cmd, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline);
+		vkCmdDraw(cmd, 3, 1, 0, 0);
+
 		vkCmdEndRenderPass(cmd);
 
 		vkEndCommandBuffer(cmd);
