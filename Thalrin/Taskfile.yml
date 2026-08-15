@@ -1,0 +1,142 @@
+version: "3"
+
+tasks:
+  setup:
+    desc: Setup the development environment
+    cmds:
+      - task: clone-all-dependencies
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - task: clean-dependencies
+      - task: clean-engine
+      - task: clean-editor
+
+  compile:
+    desc: Compile the entire project
+    cmds:
+      - task: compile-all-dependencies
+      - task: compile-engine
+      - task: compile-editor
+
+  clone-all-dependencies:
+    desc: Clone necessary dependencies
+    cmds:
+      - task: clone-tinygltf
+      - task: clone-freetype
+      - task: clone-stb
+      - task: clone-blake3
+      - task: clone-zlib
+      - task: clone-openssl
+      - task: clone-curl
+
+  check-if-dependencies-folder-exist:
+    desc: Check if dependencies are already cloned
+    cmds:
+      - pwsh -NoProfile -File "./scripts/check-if-dependencies-folder-exist.ps1"
+
+  clone-tinygltf:
+    desc: Clone the tinygltf dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-tinygltf.ps1"
+
+  clone-freetype:
+    desc: Clone the FreeType dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-freetype.ps1"
+
+  clone-stb:
+    desc: Clone the stb dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-stb.ps1"
+
+  clone-blake3:
+    desc: Clone the BLAKE3 dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-blake3.ps1"
+
+  clone-zlib:
+    desc: Clone the zlib dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-zlib.ps1"
+
+  clone-openssl:
+    desc: Clone the OpenSSL dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-openssl.ps1"
+
+  clone-curl:
+    desc: Clone the cURL dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-curl.ps1"
+
+  compile-all-dependencies:
+    desc: Compile necessary dependencies
+    cmds:
+      - task: compile-freetype
+      - task: compile-blake3
+      - task: compile-zlib
+      - task: compile-openssl
+      - task: compile-curl
+
+  compile-freetype:
+    desc: Compile the FreeType dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-freetype.ps1"
+
+  compile-blake3:
+    desc: Compile the BLAKE3 dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-blake3.ps1"
+
+  compile-zlib:
+    desc: Compile the zlib dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-zlib.ps1"
+
+  compile-openssl:
+    desc: Compile the OpenSSL dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-openssl.ps1"
+
+  compile-curl:
+    desc: Compile the cURL dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-curl.ps1" -Clean -BuildZlib -BuildOpenSSL -BuildCurl
+
+  compile-engine:
+    desc: Compile the game engine
+    dir: src/engine
+    cmds:
+      - echo "Not implemented yet"
+
+  compile-editor:
+    desc: Compile the game editor
+    dir: src/editor
+    cmds:
+      - echo "Not implemented yet"
+
+  clean-dependencies:
+    desc: Clean dependencies build artifacts
+    cmds:
+      - echo "Not implemented yet"
+
+  clean-engine:
+    desc: Clean engine build artifacts
+    dir: src/engine
+    cmds:
+      - echo "Not implemented yet"
+
+  clean-editor:
+    desc: Clean editor build artifacts
+    dir: src/editor
+    cmds:
+      - echo "Not implemented yet"

@@ -76,3 +76,5 @@ $RECYCLE.BIN/
 .vs
 Output
 logs
+Thalrin/Dependencies/*
+!Thalrin/Dependencies/Vulkan
