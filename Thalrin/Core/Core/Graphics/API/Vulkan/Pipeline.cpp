@@ -1,5 +1,6 @@
 #include "Pipeline.h"
 #include <Core/IO/FileReader.h>
+#include <Core/Graphics/Vertex.h>
 #include <Core/Debug.h>
 
 namespace Core::Graphics::API::Vulkan
@@ -54,11 +55,30 @@ namespace Core::Graphics::API::Vulkan
 
 		VkPipelineShaderStageCreateInfo shaderStages[] = { vertStage, fragStage };
 
-		// --- Vertex input (empty, triangle is hardcoded in shader) ---
+		// --- Vertex input ---
+		VkVertexInputBindingDescription bindingDescription{};
+		bindingDescription.binding = 0;
+		bindingDescription.stride = sizeof(Vertex);
+		bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
+
+		VkVertexInputAttributeDescription attributeDescriptions[2]{};
+
+		attributeDescriptions[0].binding = 0;
+		attributeDescriptions[0].location = 0;
+		attributeDescriptions[0].format = VK_FORMAT_R32G32_SFLOAT;
+		attributeDescriptions[0].offset = offsetof(Vertex, position);
+
+		attributeDescriptions[1].binding = 0;
+		attributeDescriptions[1].location = 1;
+		attributeDescriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
+		attributeDescriptions[1].offset = offsetof(Vertex, color);
+
 		VkPipelineVertexInputStateCreateInfo vertexInput{};
 		vertexInput.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-		vertexInput.vertexBindingDescriptionCount = 0;
-		vertexInput.vertexAttributeDescriptionCount = 0;
+		vertexInput.vertexBindingDescriptionCount = 1;
+		vertexInput.pVertexBindingDescriptions = &bindingDescription;
+		vertexInput.vertexAttributeDescriptionCount = 2;
+		vertexInput.pVertexAttributeDescriptions = attributeDescriptions;
 
 		// --- Input assembly ---
 		VkPipelineInputAssemblyStateCreateInfo inputAssembly{};

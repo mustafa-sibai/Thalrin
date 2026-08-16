@@ -24,6 +24,9 @@
     <ClInclude Include="Core\Engine.h" />
     <ClInclude Include="Core\Graphics\API\Vulkan\Pipeline.h" />
     <ClInclude Include="Core\Graphics\API\Vulkan\RenderPass.h" />
+    <ClInclude Include="Core\Graphics\API\Vulkan\VertexBuffer.h" />
+    <ClInclude Include="Core\Graphics\Renderer.h" />
+    <ClInclude Include="Core\Graphics\Vertex.h" />
     <ClInclude Include="Core\Input\Keyboard.h" />
     <ClInclude Include="Core\Input\Mouse.h" />
     <ClInclude Include="Core\IO\FileReader.h" />
@@ -33,6 +36,7 @@
     <ClInclude Include="Core\Math\Vector2.h" />
     <ClInclude Include="Core\Math\Vector3.h" />
     <ClInclude Include="Core\Math\Vector4.h" />
+    <ClInclude Include="Core\Networking\Http.h" />
     <ClInclude Include="Core\Platform\Windows\VulkanSurface.h" />
     <ClInclude Include="Core\Platform\Windows\Window.h" />
     <ClInclude Include="Core\Platform\Windows\WindowsUtils.h" />
@@ -50,6 +54,8 @@
     <ClCompile Include="Core\Graphics\API\Vulkan\Pipeline.cpp" />
     <ClCompile Include="Core\Graphics\API\Vulkan\RenderPass.cpp" />
     <ClCompile Include="Core\Graphics\API\Vulkan\Swapchain.cpp" />
+    <ClCompile Include="Core\Graphics\API\Vulkan\VertexBuffer.cpp" />
+    <ClCompile Include="Core\Graphics\Renderer.cpp" />
     <ClCompile Include="Core\Input\Keyboard.cpp" />
     <ClCompile Include="Core\Input\Mouse.cpp" />
     <ClCompile Include="Core\IO\FileReader.cpp" />
@@ -58,6 +64,7 @@
     <ClCompile Include="Core\Math\Vector2.cpp" />
     <ClCompile Include="Core\Math\Vector3.cpp" />
     <ClCompile Include="Core\Math\Vector4.cpp" />
+    <ClCompile Include="Core\Networking\Http.cpp" />
     <ClCompile Include="Core\Platform\Windows\Window.cpp" />
     <ClCompile Include="Core\Scene\Scene.cpp" />
     <ClCompile Include="Core\Scene\SceneManager.cpp" />
@@ -157,32 +164,32 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(SolutionDir)Dependencies\freetype\objs\x64\Debug Static;$(SolutionDir)Dependencies\curl\output\lib;$(SolutionDir)Dependencies\openssl\install\lib;$(SolutionDir)Dependencies\zlib\output\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(SolutionDir)Dependencies\freetype\objs\x64\Debug Static;$(SolutionDir)Dependencies\curl\output\lib;$(SolutionDir)Dependencies\openssl\install\lib;$(SolutionDir)Dependencies\zlib\output\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -190,7 +197,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -213,7 +220,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -221,7 +228,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -242,7 +249,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -250,7 +257,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -273,7 +280,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -281,7 +288,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>

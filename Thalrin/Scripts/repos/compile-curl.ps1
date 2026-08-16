@@ -38,7 +38,10 @@ if ($BuildCurl) {
         -DCURL_ZLIB=ON `
         -DCURL_USE_OPENSSL=ON `
         -DOPENSSL_USE_STATIC_LIBS=TRUE `
-        -DCURL_USE_LIBPSL=OFF
+        -DCURL_USE_LIBPSL=OFF `
+        -DCURL_USE_LIBSSH2=OFF `
+        -DUSE_LIBIDN2=OFF
+        
     cmake --build build --config Debug --parallel
     cmake --install build --config Debug
     Pop-Location

@@ -119,7 +119,7 @@
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-</Command>
+xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,7 +148,7 @@ xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-</Command>
+xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -175,7 +175,7 @@ xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-</Command>
+xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -204,7 +204,7 @@ xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-</Command>
+xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

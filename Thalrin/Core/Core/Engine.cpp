@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include <Core/Debug.h>
 
 namespace Core
 {
@@ -15,21 +16,16 @@ namespace Core
 
 	void Engine::Run()
 	{
-		window.Create("Engine", 1280, 720);
-		vulkanDevice.CreateInstance();
-		vulkanSurface.Create(vulkanDevice.GetInstance(), window.GetInstance(), window.GetHWND());
-		vulkanDevice.CreatePhysicalDevice(vulkanSurface.GetSurface());
-		vulkanDevice.CreateLogicalDevice();
-		swapchain.CreateSwapchain(vulkanDevice.GetPhysicalDevice(), vulkanDevice.GetLogicalDevice(), vulkanSurface.GetSurface(), window.GetWidth(), window.GetHeight());
-		renderPass.Create(vulkanDevice.GetLogicalDevice(), swapchain.GetSwapchainFormat());
-		swapchain.CreateFramebuffers(renderPass.GetRenderPass());
-		vulkanDevice.CreateCommandPool();
-		vulkanDevice.CreateCommandBuffers(swapchain.GetImageCount());
-		vulkanDevice.CreateSyncObjects(swapchain.GetImageCount());
-		pipeline.Create(vulkanDevice.GetLogicalDevice(), renderPass.GetRenderPass(), swapchain.GetExtent(),
-			"Shaders/triangle-shader.vert.spv", "Shaders/triangle-shader.frag.spv");
+		std::string request = "";
+		std::vector<std::string> headers;
 
+		http.Initialize();
+		http.Get("https://httpbin.org/get", request, headers);
+		Debug::LogInfo("%s", request.c_str());
+
+		window.Create("Engine", 1280, 720);
 		sceneManager.LoadScene(0);
+		renderer.Initialize();
 
 		while (window.IsOpen())
 		{
@@ -40,12 +36,7 @@ namespace Core
 			keyboard.Update();
 			sceneManager.Update(time.GetDeltaTime());
 
-			vulkanDevice.DrawFrame(
-				swapchain.GetSwapchain(),
-				renderPass.GetRenderPass(),
-				swapchain.GetFramebuffers(),
-				swapchain.GetExtent(),
-				pipeline.GetPipeline());
+			renderer.Render();
 
 			sceneManager.Render();
 		}
