@@ -1,7 +1,7 @@
 # Thalrin
 
 <p align="center">
-  <img src="static/thalrin.png" alt="Thalrin" width="400" />
+  <img src="Static/thalrin.png" alt="Thalrin" width="400" />
 </p>
 
 Thalrin is an ancient, indestructible material discovered deep beneath the world of Chronicle. Unlike ordinary metals that are mined and smelted, Thalrin was grown as a crystalline lattice that spread through the world's bedrock like veins through a body, connecting every continent, every cavern, every forgotten ruin into one vast living network.
