@@ -6,6 +6,11 @@ tasks:
     cmds:
       - task: clone-all-dependencies
 
+  update-tools:
+    desc: Update installed tools via Chocolatey and gup
+    cmds:
+      - pwsh -NoProfile -File "./scripts/update-tools.ps1"
+
   clean:
     desc: Clean build artifacts
     cmds:
