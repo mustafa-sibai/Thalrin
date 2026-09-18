@@ -60,40 +60,44 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\;$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ThalrinAppIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinAppLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\;$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ThalrinAppIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinAppLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\;$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ThalrinAppIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinAppLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\;$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ThalrinAppIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinAppLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,7 +111,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;Core.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinAppLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -118,8 +122,10 @@
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,7 +142,7 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;Core.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinAppLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -147,8 +153,10 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -163,7 +171,7 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;Core.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinAppLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -174,8 +182,10 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -192,7 +202,7 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;Core.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinAppLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -203,8 +213,10 @@ xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
-xcopy /Y /I "$(SolutionDir)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

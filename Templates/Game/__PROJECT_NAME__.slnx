@@ -1,0 +1,15 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Engine/">
+    <Project Path="__ENGINE_REL__/Core/Core.vcxproj" Id="__CORE_GUID__" />
+    <Project Path="__ENGINE_REL__/Editor/Editor.vcxproj" Id="__EDITOR_GUID__">
+      <BuildDependency Project="__ENGINE_REL__/Core/Core.vcxproj" />
+    </Project>
+  </Folder>
+  <Project Path="__PROJECT_NAME__/__PROJECT_NAME__.vcxproj" Id="__PROJECT_GUID__">
+    <BuildDependency Project="__ENGINE_REL__/Core/Core.vcxproj" />
+  </Project>
+</Solution>

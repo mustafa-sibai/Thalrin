@@ -6,6 +6,12 @@ tasks:
     cmds:
       - task: clone-all-dependencies
 
+  generate-game-project:
+    desc: Create a new game project with its own solution
+    interactive: true
+    cmds:
+      - pwsh -NoProfile -File "./scripts/generate-game-project.ps1" {{.CLI_ARGS}}
+
   update-tools:
     desc: Update installed tools via Chocolatey and gup
     cmds:
@@ -35,6 +41,7 @@ tasks:
       - task: clone-zlib
       - task: clone-openssl
       - task: clone-curl
+      - task: clone-protobuf
 
   check-if-dependencies-folder-exist:
     desc: Check if dependencies are already cloned
@@ -83,6 +90,12 @@ tasks:
       - task: check-if-dependencies-folder-exist
       - pwsh -NoProfile -File "./scripts/repos/clone-curl.ps1"
 
+  clone-protobuf:
+    desc: Clone the Protocol Buffers dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-protobuf.ps1"
+
   compile-all-dependencies:
     desc: Compile necessary dependencies
     cmds:
@@ -91,6 +104,7 @@ tasks:
       - task: compile-zlib
       - task: compile-openssl
       - task: compile-curl
+      - task: compile-protobuf
 
   compile-freetype:
     desc: Compile the FreeType dependency
@@ -116,6 +130,11 @@ tasks:
     desc: Compile the cURL dependency
     cmds:
       - pwsh -NoProfile -File "./scripts/repos/compile-curl.ps1" -Clean -BuildZlib -BuildOpenSSL -BuildCurl
+
+  compile-protobuf:
+    desc: Compile the Protocol Buffers dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-protobuf.ps1"
 
   compile-engine:
     desc: Compile the game engine

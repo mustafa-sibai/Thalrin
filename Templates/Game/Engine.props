@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Points this game at a Thalrin engine.
+
+  __ENGINE_MODE__ - change ThalrinEngineDir to move the game to a different engine
+  checkout; nothing else in the project references the engine directly.
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ThalrinEngineDir>__ENGINE_DIR__</ThalrinEngineDir>
+  </PropertyGroup>
+  <Import Project="$(ThalrinEngineDir)\Thalrin.props" />
+</Project>

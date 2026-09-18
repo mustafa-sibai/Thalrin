@@ -1,0 +1,38 @@
+version: "3"
+
+vars:
+  ENGINE_DIR: Engine
+  ENGINE_REPO: https://github.com/mustafa-sibai/Thalrin
+
+tasks:
+  setup:
+    desc: Clone and build the engine so this project can be built
+    cmds:
+      - task: clone-engine
+      - task: setup-engine
+      - task: compile-engine
+
+  clone-engine:
+    desc: Clone the Thalrin engine into the Engine folder
+    status:
+      - test -f {{.ENGINE_DIR}}/Taskfile.yml
+    cmds:
+      - git clone {{.ENGINE_REPO}} {{.ENGINE_DIR}}
+
+  setup-engine:
+    desc: Install the engine's tooling and clone its dependencies
+    preconditions:
+      - sh: test -f {{.ENGINE_DIR}}/setup.ps1
+        msg: "Engine not found in '{{.ENGINE_DIR}}'. Run 'task clone-engine' first."
+    cmds:
+      # setup.ps1 needs an elevated shell and prompts for confirmation.
+      - pwsh -NoProfile -File "./{{.ENGINE_DIR}}/setup.ps1"
+      - task --dir {{.ENGINE_DIR}} setup
+
+  compile-engine:
+    desc: Build the engine's third-party dependencies
+    preconditions:
+      - sh: test -f {{.ENGINE_DIR}}/Taskfile.yml
+        msg: "Engine not found in '{{.ENGINE_DIR}}'. Run 'task clone-engine' first."
+    cmds:
+      - task --dir {{.ENGINE_DIR}} compile-all-dependencies

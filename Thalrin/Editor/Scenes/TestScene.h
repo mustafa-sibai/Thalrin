@@ -1,8 +1,8 @@
 #pragma once
-#include <Core/Scene/Scene.h>
+#include <Thalrin/Scene/Scene.h>
 
-using namespace Core;
-using namespace Core::SceneManagement;
+using namespace Thalrin;
+using namespace Thalrin::SceneManagement;
 
 class TestScene : public Scene
 {

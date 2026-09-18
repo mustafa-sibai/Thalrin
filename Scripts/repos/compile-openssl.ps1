@@ -1,4 +1,4 @@
-Push-Location ./dependencies/openssl
+Push-Location ./Thalrin/dependencies/openssl
 Write-Host "Building OpenSSL..."
 $installDir = "$PWD\install"
 perl Configure VC-WIN64A no-shared --prefix="$installDir" --openssldir="$installDir\ssl" -d

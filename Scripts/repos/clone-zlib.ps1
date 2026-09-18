@@ -1,4 +1,4 @@
-Set-Location ./dependencies
+Set-Location ./Thalrin/dependencies
 
 git clone git@github.com:madler/zlib.git
 Set-Location zlib

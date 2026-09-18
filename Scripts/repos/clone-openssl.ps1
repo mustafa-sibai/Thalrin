@@ -1,4 +1,4 @@
-Set-Location ./dependencies
+Set-Location ./Thalrin/dependencies
 
 git clone git@github.com:openssl/openssl.git
 Set-Location openssl

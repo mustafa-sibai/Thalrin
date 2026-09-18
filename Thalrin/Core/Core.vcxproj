@@ -19,71 +19,86 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\API.h" />
-    <ClInclude Include="Core\Debug.h" />
-    <ClInclude Include="Core\Engine.h" />
-    <ClInclude Include="Core\Graphics\API\Vulkan\Pipeline.h" />
-    <ClInclude Include="Core\Graphics\API\Vulkan\RenderPass.h" />
-    <ClInclude Include="Core\Graphics\API\Vulkan\VertexBuffer.h" />
-    <ClInclude Include="Core\Graphics\Renderer.h" />
-    <ClInclude Include="Core\Graphics\Vertex.h" />
-    <ClInclude Include="Core\Input\Keyboard.h" />
-    <ClInclude Include="Core\Input\Mouse.h" />
-    <ClInclude Include="Core\IO\FileReader.h" />
-    <ClInclude Include="Core\Math\Math.h" />
-    <ClInclude Include="Core\Math\Mathf.h" />
-    <ClInclude Include="Core\Math\Rectangle.h" />
-    <ClInclude Include="Core\Math\Vector2.h" />
-    <ClInclude Include="Core\Math\Vector3.h" />
-    <ClInclude Include="Core\Math\Vector4.h" />
-    <ClInclude Include="Core\Networking\Http.h" />
-    <ClInclude Include="Core\Platform\Windows\VulkanSurface.h" />
-    <ClInclude Include="Core\Platform\Windows\Window.h" />
-    <ClInclude Include="Core\Platform\Windows\WindowsUtils.h" />
-    <ClInclude Include="Core\Scene\Scene.h" />
-    <ClInclude Include="Core\Scene\SceneManager.h" />
-    <ClInclude Include="Core\Time.h" />
-    <ClInclude Include="Core\Timer.h" />
-    <ClInclude Include="Core\Version.h" />
-    <ClInclude Include="Core\Graphics\API\Vulkan\VulkanDevice.h" />
-    <ClInclude Include="Core\Graphics\API\Vulkan\Swapchain.h" />
+    <ClInclude Include="Thalrin\API.h" />
+    <ClInclude Include="Thalrin\Debug.h" />
+    <ClInclude Include="Thalrin\Engine.h" />
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\Pipeline.h" />
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\RenderPass.h" />
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\VertexBuffer.h" />
+    <ClInclude Include="Thalrin\Graphics\Renderer.h" />
+    <ClInclude Include="Thalrin\Graphics\Vertex.h" />
+    <ClInclude Include="Thalrin\Input\Keyboard.h" />
+    <ClInclude Include="Thalrin\Input\Mouse.h" />
+    <ClInclude Include="Thalrin\IO\FileReader.h" />
+    <ClInclude Include="Thalrin\Math\Math.h" />
+    <ClInclude Include="Thalrin\Math\Mathf.h" />
+    <ClInclude Include="Thalrin\Math\Rectangle.h" />
+    <ClInclude Include="Thalrin\Math\Vector2.h" />
+    <ClInclude Include="Thalrin\Math\Vector3.h" />
+    <ClInclude Include="Thalrin\Math\Vector4.h" />
+    <ClInclude Include="Thalrin\Networking\Http.h" />
+    <ClInclude Include="Thalrin\Networking\Packets\BasePacket.h" />
+    <ClInclude Include="Thalrin\Networking\Packets\PositionPacket.h" />
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBinaryReader.h" />
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBinaryWriter.h" />
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBuffer.h" />
+    <ClInclude Include="Thalrin\Networking\SlidingBuffer.h" />
+    <ClInclude Include="Thalrin\Platform\Windows\VulkanSurface.h" />
+    <ClInclude Include="Thalrin\Platform\Windows\Window.h" />
+    <ClInclude Include="Thalrin\Platform\Windows\WindowsUtils.h" />
+    <ClInclude Include="Thalrin\Scene\Scene.h" />
+    <ClInclude Include="Thalrin\Scene\SceneManager.h" />
+    <ClInclude Include="Thalrin\Time.h" />
+    <ClInclude Include="Thalrin\Timer.h" />
+    <ClInclude Include="Thalrin\Version.h" />
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\VulkanDevice.h" />
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\Swapchain.h" />
+    <ClInclude Include="Thalrin\Networking\UDPServer.h" />
+    <ClInclude Include="Thalrin\Networking\UDPClient.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Debug.cpp" />
-    <ClCompile Include="Core\Engine.cpp" />
-    <ClCompile Include="Core\Graphics\API\Vulkan\Pipeline.cpp" />
-    <ClCompile Include="Core\Graphics\API\Vulkan\RenderPass.cpp" />
-    <ClCompile Include="Core\Graphics\API\Vulkan\Swapchain.cpp" />
-    <ClCompile Include="Core\Graphics\API\Vulkan\VertexBuffer.cpp" />
-    <ClCompile Include="Core\Graphics\Renderer.cpp" />
-    <ClCompile Include="Core\Input\Keyboard.cpp" />
-    <ClCompile Include="Core\Input\Mouse.cpp" />
-    <ClCompile Include="Core\IO\FileReader.cpp" />
-    <ClCompile Include="Core\Math\Mathf.cpp" />
-    <ClCompile Include="Core\Math\Rectangle.cpp" />
-    <ClCompile Include="Core\Math\Vector2.cpp" />
-    <ClCompile Include="Core\Math\Vector3.cpp" />
-    <ClCompile Include="Core\Math\Vector4.cpp" />
-    <ClCompile Include="Core\Networking\Http.cpp" />
-    <ClCompile Include="Core\Platform\Windows\Window.cpp" />
-    <ClCompile Include="Core\Scene\Scene.cpp" />
-    <ClCompile Include="Core\Scene\SceneManager.cpp" />
-    <ClCompile Include="Core\Time.cpp" />
-    <ClCompile Include="Core\Timer.cpp" />
-    <ClCompile Include="Core\Graphics\API\Vulkan\VulkanDevice.cpp" />
-    <ClCompile Include="Core\Platform\Windows\VulkanSurface.cpp" />
+    <ClCompile Include="Thalrin\Debug.cpp" />
+    <ClCompile Include="Thalrin\Engine.cpp" />
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\Pipeline.cpp" />
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\RenderPass.cpp" />
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\Swapchain.cpp" />
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\VertexBuffer.cpp" />
+    <ClCompile Include="Thalrin\Graphics\Renderer.cpp" />
+    <ClCompile Include="Thalrin\Input\Keyboard.cpp" />
+    <ClCompile Include="Thalrin\Input\Mouse.cpp" />
+    <ClCompile Include="Thalrin\IO\FileReader.cpp" />
+    <ClCompile Include="Thalrin\Math\Mathf.cpp" />
+    <ClCompile Include="Thalrin\Math\Rectangle.cpp" />
+    <ClCompile Include="Thalrin\Math\Vector2.cpp" />
+    <ClCompile Include="Thalrin\Math\Vector3.cpp" />
+    <ClCompile Include="Thalrin\Math\Vector4.cpp" />
+    <ClCompile Include="Thalrin\Networking\Http.cpp" />
+    <ClCompile Include="Thalrin\Networking\Packets\BasePacket.cpp" />
+    <ClCompile Include="Thalrin\Networking\Packets\PositionPacket.cpp" />
+    <ClCompile Include="Thalrin\Networking\Serialization\NetworkBinaryReader.cpp" />
+    <ClCompile Include="Thalrin\Networking\Serialization\NetworkBinaryWriter.cpp" />
+    <ClCompile Include="Thalrin\Networking\SlidingBuffer.cpp" />
+    <ClCompile Include="Thalrin\Platform\Windows\Window.cpp" />
+    <ClCompile Include="Thalrin\Scene\Scene.cpp" />
+    <ClCompile Include="Thalrin\Scene\SceneManager.cpp" />
+    <ClCompile Include="Thalrin\Time.cpp" />
+    <ClCompile Include="Thalrin\Timer.cpp" />
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\VulkanDevice.cpp" />
+    <ClCompile Include="Thalrin\Platform\Windows\VulkanSurface.cpp" />
+    <ClCompile Include="Thalrin\Networking\UDPServer.cpp" />
+    <ClCompile Include="Thalrin\Networking\UDPClient.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\Math\Mathf.inl" />
-    <None Include="Core\Math\Vector2.inl" />
-    <None Include="Core\Math\Vector3.inl" />
-    <None Include="Core\Math\Vector4.inl" />
-    <CustomBuild Include="Core\Shaders\triangle-shader.frag">
+    <None Include="Thalrin\Math\Mathf.inl" />
+    <None Include="Thalrin\Math\Vector2.inl" />
+    <None Include="Thalrin\Math\Vector3.inl" />
+    <None Include="Thalrin\Math\Vector4.inl" />
+    <CustomBuild Include="Thalrin\Shaders\triangle-shader.frag">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BuildInParallel>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BuildInParallel>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
@@ -93,15 +108,15 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
     </CustomBuild>
-    <CustomBuild Include="Core\Shaders\triangle-shader.vert">
+    <CustomBuild Include="Thalrin\Shaders\triangle-shader.vert">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BuildInParallel>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BuildInParallel>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Dependencies\Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ThalrinDeps)Vulkan\bin\glslc.exe "%(FullPath)" -o "$(OutDir)Shaders\%(Filename)%(Extension).spv"</Command>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)Shaders\%(Filename)%(Extension).spv</Outputs>
@@ -150,46 +165,54 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(MSBuildThisFileDirectory)..\Thalrin.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(SolutionDir)Dependencies\freetype\objs\x64\Debug Static;$(SolutionDir)Dependencies\curl\output\lib;$(SolutionDir)Dependencies\openssl\install\lib;$(SolutionDir)Dependencies\zlib\output\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Thalrin</TargetName>
+    <IncludePath>$(ThalrinEngineIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinEngineLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Thalrin</TargetName>
+    <IncludePath>$(ThalrinEngineIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinEngineLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(SolutionDir)Dependencies\freetype\objs\x64\Debug Static;$(SolutionDir)Dependencies\curl\output\lib;$(SolutionDir)Dependencies\openssl\install\lib;$(SolutionDir)Dependencies\zlib\output\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Thalrin</TargetName>
+    <IncludePath>$(ThalrinEngineIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinEngineLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
     <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate\</IntDir>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Dependencies\Vulkan\include;$(SolutionDir)Dependencies\freetype\include;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\curl\output\include;$(SolutionDir)Dependencies\openssl\install\include;$(SolutionDir)Dependencies\zlib\output\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\Vulkan\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Thalrin</TargetName>
+    <IncludePath>$(ThalrinEngineIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ThalrinEngineLibraryPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);THALRIN_EXPORTS;CURL_STATICLIB;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -197,20 +220,35 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinEngineLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <PostBuildEvent>
       <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+
+
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
 
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
 
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(ThalrinDeps)Vulkan\bin\*.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+xcopy /Y /I /S "$(ThalrinDeps)protobuf\output\bin\protoc.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
 xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+
+
 del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -220,7 +258,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);THALRIN_EXPORTS;CURL_STATICLIB;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -228,20 +266,35 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinEngineLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <PostBuildEvent>
       <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+
+
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
 
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
 
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(ThalrinDeps)Vulkan\bin\*.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+xcopy /Y /I /S "$(ThalrinDeps)protobuf\output\bin\protoc.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
 xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+
+
 del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -249,7 +302,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);THALRIN_EXPORTS;CURL_STATICLIB;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -257,20 +310,35 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinEngineLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <PostBuildEvent>
       <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+
+
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
 
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
 
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(ThalrinDeps)Vulkan\bin\*.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+xcopy /Y /I /S "$(ThalrinDeps)protobuf\output\bin\protoc.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
 xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+
+
 del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -280,7 +348,7 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);CORE_EXPORTS;CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);THALRIN_EXPORTS;CURL_STATICLIB;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -288,20 +356,35 @@ del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Con
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ThalrinEngineLibs);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <PostBuildEvent>
       <Command>pwsh -NoProfile -ExecutionPolicy Bypass -File "$(MSBuildProjectDirectory)\VersionUpdater.ps1"
+
+
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib"
 
 rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
 
+rmdir /S /Q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.h" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
 xcopy /Y /I /S "$(MSBuildProjectDirectory)\*.inl" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\include"
+
+xcopy /Y /I /S "$(ThalrinDeps)Vulkan\bin\*.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+xcopy /Y /I /S "$(ThalrinDeps)protobuf\output\bin\protoc.exe" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\bin"
+
+
 xcopy /Y /I /S "$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin\*" "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)"
+
+
 del /s /q "$(SolutionDir)Output\$(MSBuildProjectName)\ship\lib\$(Platform)\$(Configuration)\*.exp"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

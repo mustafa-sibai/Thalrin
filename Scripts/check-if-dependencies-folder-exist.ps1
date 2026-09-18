@@ -1,4 +1,4 @@
-if (-not (Test-Path -Path ".\Dependencies")) {
-    New-Item -Path "./Dependencies" -ItemType Directory
+if (-not (Test-Path -Path ".\Thalrin\Dependencies")) {
+    New-Item -Path "./Thalrin/Dependencies" -ItemType Directory
     exit
 }

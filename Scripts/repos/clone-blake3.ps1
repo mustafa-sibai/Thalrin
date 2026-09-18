@@ -1,4 +1,4 @@
-Set-Location ./dependencies
+Set-Location ./Thalrin/dependencies
 
 git clone git@github.com:BLAKE3-team/BLAKE3.git
 Set-Location BLAKE3

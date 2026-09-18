@@ -15,256 +15,301 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Math\Math.h">
+    <ClInclude Include="Thalrin\Math\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Mathf.h">
+    <ClInclude Include="Thalrin\Math\Mathf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Rectangle.h">
+    <ClInclude Include="Thalrin\Math\Rectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector2.h">
+    <ClInclude Include="Thalrin\Math\Vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector3.h">
+    <ClInclude Include="Thalrin\Math\Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector4.h">
+    <ClInclude Include="Thalrin\Math\Vector4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Input\Mouse.h">
+    <ClInclude Include="Thalrin\Input\Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Input\Keyboard.h">
+    <ClInclude Include="Thalrin\Input\Keyboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Scene\Scene.h">
+    <ClInclude Include="Thalrin\Scene\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Scene\SceneManager.h">
+    <ClInclude Include="Thalrin\Scene\SceneManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Platform\Windows\WindowsUtils.h">
+    <ClInclude Include="Thalrin\Platform\Windows\WindowsUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Platform\Windows\Window.h">
+    <ClInclude Include="Thalrin\Platform\Windows\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\API.h">
+    <ClInclude Include="Thalrin\API.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Debug.h">
+    <ClInclude Include="Thalrin\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Engine.h">
+    <ClInclude Include="Thalrin\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Input\Keyboard.h">
+    <ClInclude Include="Thalrin\Input\Keyboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Input\Mouse.h">
+    <ClInclude Include="Thalrin\Input\Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Math.h">
+    <ClInclude Include="Thalrin\Math\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Mathf.h">
+    <ClInclude Include="Thalrin\Math\Mathf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Rectangle.h">
+    <ClInclude Include="Thalrin\Math\Rectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector2.h">
+    <ClInclude Include="Thalrin\Math\Vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector3.h">
+    <ClInclude Include="Thalrin\Math\Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Math\Vector4.h">
+    <ClInclude Include="Thalrin\Math\Vector4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Platform\Windows\Window.h">
+    <ClInclude Include="Thalrin\Platform\Windows\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Platform\Windows\WindowsUtils.h">
+    <ClInclude Include="Thalrin\Platform\Windows\WindowsUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Scene\Scene.h">
+    <ClInclude Include="Thalrin\Scene\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Scene\SceneManager.h">
+    <ClInclude Include="Thalrin\Scene\SceneManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Time.h">
+    <ClInclude Include="Thalrin\Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Timer.h">
+    <ClInclude Include="Thalrin\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Version.h">
+    <ClInclude Include="Thalrin\Version.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\API\Vulkan\VulkanDevice.h">
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\VulkanDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Platform\Windows\VulkanSurface.h">
+    <ClInclude Include="Thalrin\Platform\Windows\VulkanSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\API\Vulkan\Swapchain.h">
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\Swapchain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\API\Vulkan\RenderPass.h">
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\RenderPass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\IO\FileReader.h">
+    <ClInclude Include="Thalrin\IO\FileReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\API\Vulkan\Pipeline.h">
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\Pipeline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\Renderer.h">
+    <ClInclude Include="Thalrin\Graphics\Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\Vertex.h">
+    <ClInclude Include="Thalrin\Graphics\Vertex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Graphics\API\Vulkan\VertexBuffer.h">
+    <ClInclude Include="Thalrin\Graphics\API\Vulkan\VertexBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Networking\Http.h">
+    <ClInclude Include="Thalrin\Networking\Http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\UDPServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\UDPClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBinaryReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBinaryWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\Serialization\NetworkBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\Packets\BasePacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\Packets\PositionPacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thalrin\Networking\SlidingBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Math\Mathf.cpp">
+    <ClCompile Include="Thalrin\Math\Mathf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Rectangle.cpp">
+    <ClCompile Include="Thalrin\Math\Rectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector2.cpp">
+    <ClCompile Include="Thalrin\Math\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector3.cpp">
+    <ClCompile Include="Thalrin\Math\Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector4.cpp">
+    <ClCompile Include="Thalrin\Math\Vector4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Input\Keyboard.cpp">
+    <ClCompile Include="Thalrin\Input\Keyboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Input\Mouse.cpp">
+    <ClCompile Include="Thalrin\Input\Mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Scene\Scene.cpp">
+    <ClCompile Include="Thalrin\Scene\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Scene\SceneManager.cpp">
+    <ClCompile Include="Thalrin\Scene\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Platform\Windows\Window.cpp">
+    <ClCompile Include="Thalrin\Platform\Windows\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Debug.cpp">
+    <ClCompile Include="Thalrin\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Engine.cpp">
+    <ClCompile Include="Thalrin\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Input\Keyboard.cpp">
+    <ClCompile Include="Thalrin\Input\Keyboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Input\Mouse.cpp">
+    <ClCompile Include="Thalrin\Input\Mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Mathf.cpp">
+    <ClCompile Include="Thalrin\Math\Mathf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Rectangle.cpp">
+    <ClCompile Include="Thalrin\Math\Rectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector2.cpp">
+    <ClCompile Include="Thalrin\Math\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector3.cpp">
+    <ClCompile Include="Thalrin\Math\Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Math\Vector4.cpp">
+    <ClCompile Include="Thalrin\Math\Vector4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Platform\Windows\Window.cpp">
+    <ClCompile Include="Thalrin\Platform\Windows\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Scene\Scene.cpp">
+    <ClCompile Include="Thalrin\Scene\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Scene\SceneManager.cpp">
+    <ClCompile Include="Thalrin\Scene\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Time.cpp">
+    <ClCompile Include="Thalrin\Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Timer.cpp">
+    <ClCompile Include="Thalrin\Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\API\Vulkan\VulkanDevice.cpp">
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\VulkanDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Platform\Windows\VulkanSurface.cpp">
+    <ClCompile Include="Thalrin\Platform\Windows\VulkanSurface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\API\Vulkan\Swapchain.cpp">
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\Swapchain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\API\Vulkan\RenderPass.cpp">
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\RenderPass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\IO\FileReader.cpp">
+    <ClCompile Include="Thalrin\IO\FileReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\API\Vulkan\Pipeline.cpp">
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\Pipeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\Renderer.cpp">
+    <ClCompile Include="Thalrin\Graphics\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Graphics\API\Vulkan\VertexBuffer.cpp">
+    <ClCompile Include="Thalrin\Graphics\API\Vulkan\VertexBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Networking\Http.cpp">
+    <ClCompile Include="Thalrin\Networking\Http.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\UDPServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\UDPClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\Serialization\NetworkBinaryReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\Serialization\NetworkBinaryWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\Packets\BasePacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\Packets\PositionPacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thalrin\Networking\SlidingBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\Math\Mathf.inl">
+    <None Include="Thalrin\Math\Mathf.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector2.inl">
+    <None Include="Thalrin\Math\Vector2.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector3.inl">
+    <None Include="Thalrin\Math\Vector3.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector4.inl">
+    <None Include="Thalrin\Math\Vector4.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Mathf.inl">
+    <None Include="Thalrin\Math\Mathf.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector2.inl">
+    <None Include="Thalrin\Math\Vector2.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector3.inl">
+    <None Include="Thalrin\Math\Vector3.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Core\Math\Vector4.inl">
+    <None Include="Thalrin\Math\Vector4.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Core\Shaders\triangle-shader.frag" />
-    <CustomBuild Include="Core\Shaders\triangle-shader.vert" />
+    <CustomBuild Include="Thalrin\Shaders\triangle-shader.frag" />
+    <CustomBuild Include="Thalrin\Shaders\triangle-shader.vert" />
   </ItemGroup>
 </Project>

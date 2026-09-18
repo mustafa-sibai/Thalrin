@@ -1,4 +1,4 @@
-Push-Location ./dependencies/zlib
+Push-Location ./Thalrin/dependencies/zlib
 Write-Host "Building zlib..."
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
     -DZLIB_BUILD_SHARED=OFF `
