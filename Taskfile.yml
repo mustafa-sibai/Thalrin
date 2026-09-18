@@ -1,11 +1,6 @@
 version: "3"
 
 tasks:
-  setup:
-    desc: Setup the development environment
-    cmds:
-      - task: clone-all-dependencies
-
   generate-game-project:
     desc: Create a new game project with its own solution
     interactive: true
@@ -42,6 +37,7 @@ tasks:
       - task: clone-openssl
       - task: clone-curl
       - task: clone-protobuf
+      - task: clone-miniaudio
 
   check-if-dependencies-folder-exist:
     desc: Check if dependencies are already cloned
@@ -96,6 +92,12 @@ tasks:
       - task: check-if-dependencies-folder-exist
       - pwsh -NoProfile -File "./scripts/repos/clone-protobuf.ps1"
 
+  clone-miniaudio:
+    desc: Clone the miniaudio dependency
+    cmds:
+      - task: check-if-dependencies-folder-exist
+      - pwsh -NoProfile -File "./scripts/repos/clone-miniaudio.ps1"
+
   compile-all-dependencies:
     desc: Compile necessary dependencies
     cmds:
@@ -105,6 +107,7 @@ tasks:
       - task: compile-openssl
       - task: compile-curl
       - task: compile-protobuf
+      - task: compile-miniaudio
 
   compile-freetype:
     desc: Compile the FreeType dependency
@@ -135,6 +138,11 @@ tasks:
     desc: Compile the Protocol Buffers dependency
     cmds:
       - pwsh -NoProfile -File "./scripts/repos/compile-protobuf.ps1"
+
+  compile-miniaudio:
+    desc: Compile the miniaudio dependency
+    cmds:
+      - pwsh -NoProfile -File "./scripts/repos/compile-miniaudio.ps1"
 
   compile-engine:
     desc: Compile the game engine

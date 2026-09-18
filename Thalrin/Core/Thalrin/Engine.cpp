@@ -1,5 +1,6 @@
 #include "Engine.h"
 #include <Thalrin/Debug.h>
+#include "miniaudio/miniaudio.h"
 
 namespace Thalrin
 {
@@ -16,6 +17,24 @@ namespace Thalrin
 
 	void Engine::Run()
 	{
+		ma_result result;
+		ma_engine engine;
+
+		result = ma_engine_init(NULL, &engine);
+		if (result != MA_SUCCESS) {
+			return;
+		}
+
+		result = ma_engine_play_sound(&engine, "Assets/Music/test_music.mp3", NULL);
+
+		if (result != MA_SUCCESS) {
+			Debug::LogError("Failed to play sound: %d", result);
+		}
+		//ma_engine_uninit(&engine);
+
+		//-----------
+
+
 		std::string request = "";
 		std::vector<std::string> headers;
 

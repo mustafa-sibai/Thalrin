@@ -2,6 +2,8 @@ param(
     [switch]$Clean = $false
 )
 
+. "$PSScriptRoot/toolchain.ps1"
+
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "../../Thalrin")).Path
 $ZlibRoot = "$RepoRoot/Thalrin/Dependencies/zlib/output"
 
@@ -18,7 +20,8 @@ if (-not (Test-Path "$ZlibRoot/include/zlib.h")) {
 
 Push-Location "$RepoRoot/Thalrin/Dependencies/protobuf"
 Write-Host "Building protobuf..."
-cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
+cmake -S . -B build -G "Visual Studio 18 2026" -A x64 -T "v145,version=$ToolsetVersion" `
+    -DCMAKE_SYSTEM_VERSION="$SdkVersion" `
     -DCMAKE_INSTALL_PREFIX="$PWD/output" `
     -DCMAKE_CXX_STANDARD=20 `
     -DBUILD_SHARED_LIBS=OFF `

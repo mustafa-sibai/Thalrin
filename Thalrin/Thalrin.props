@@ -22,9 +22,9 @@
   </PropertyGroup>
 
   <PropertyGroup Label="ThalrinEngine">
-    <ThalrinEngineIncludePath>$(ThalrinIncludeRoot);$(ThalrinDeps)Vulkan\include;$(ThalrinDeps)freetype\include;$(ThalrinDeps)stb;$(ThalrinDeps)curl\output\include;$(ThalrinDeps)openssl\install\include;$(ThalrinDeps)zlib\output\include;$(ThalrinDeps)protobuf\output\include</ThalrinEngineIncludePath>
-    <ThalrinEngineLibraryPath>$(ThalrinDeps)Vulkan\lib;$(ThalrinDeps)freetype\objs\x64\Debug Static;$(ThalrinDeps)curl\output\lib;$(ThalrinDeps)openssl\install\lib;$(ThalrinDeps)zlib\output\lib;$(ThalrinDeps)protobuf\output\lib</ThalrinEngineLibraryPath>
-    <ThalrinEngineLibs>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;$(ThalrinProtobufLibs)</ThalrinEngineLibs>
+    <ThalrinEngineIncludePath>$(ThalrinIncludeRoot);$(ThalrinDeps)Vulkan\include;$(ThalrinDeps)freetype\include;$(ThalrinDeps)stb;$(ThalrinDeps)curl\output\include;$(ThalrinDeps)openssl\install\include;$(ThalrinDeps)zlib\output\include;$(ThalrinDeps)protobuf\output\include;$(ThalrinDeps)miniaudio\output\include</ThalrinEngineIncludePath>
+    <ThalrinEngineLibraryPath>$(ThalrinDeps)Vulkan\lib;$(ThalrinDeps)freetype\objs\x64\Debug Static;$(ThalrinDeps)curl\output\lib;$(ThalrinDeps)openssl\install\lib;$(ThalrinDeps)zlib\output\lib;$(ThalrinDeps)protobuf\output\lib;$(ThalrinDeps)miniaudio\output\lib\x64\debug</ThalrinEngineLibraryPath>
+    <ThalrinEngineLibs>ws2_32.lib;vulkan-1.lib;freetype.lib;libcurl-d.lib;libssl.lib;libcrypto.lib;zlibstaticd.lib;Crypt32.lib;Advapi32.lib;Iphlpapi.lib;User32.lib;Wldap32.lib;miniaudio.lib;$(ThalrinProtobufLibs)</ThalrinEngineLibs>
   </PropertyGroup>
 
   <PropertyGroup Label="ThalrinConsumer">

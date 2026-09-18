@@ -4,7 +4,6 @@
 //#include <string>
 //#include "Generated/sample.pb.h"
 
-
 using namespace Thalrin;
 
 int main()

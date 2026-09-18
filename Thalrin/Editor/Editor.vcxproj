@@ -24,7 +24,8 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{a50a8dfa-cc6d-4e67-9c94-c55795186310}</ProjectGuid>
     <RootNamespace>Editor</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <VCToolsVersion>14.50.35717</VCToolsVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,9 +124,12 @@
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
 
-xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"
+xcopy "$(ProjectDir)Assets" "$(TargetDir)Assets\" /E /I /Y /D</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -154,9 +158,12 @@ xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
 
-xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"
+xcopy "$(ProjectDir)Assets" "$(TargetDir)Assets\" /E /I /Y /D</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -183,9 +190,12 @@ xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
 
-xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"
+xcopy "$(ProjectDir)Assets" "$(TargetDir)Assets\" /E /I /Y /D</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -214,9 +224,12 @@ xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
     <PreBuildEvent>
       <Command>xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\*.dll" "$(TargetDir)"
 
+
 xcopy /Y /I "$(SolutionDir)Output\Core\$(Platform)\$(Configuration)\bin\Shaders\*" "$(TargetDir)Shaders"
 
-xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"</Command>
+
+xcopy /Y /I "$(ThalrinRoot)Certs\*" "$(TargetDir)Certs"
+xcopy "$(ProjectDir)Assets" "$(TargetDir)Assets\" /E /I /Y /D</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

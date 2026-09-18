@@ -1,6 +1,9 @@
+. "$PSScriptRoot/toolchain.ps1"
+
 Push-Location ./Thalrin/dependencies/zlib
 Write-Host "Building zlib..."
-cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
+cmake -S . -B build -G "Visual Studio 18 2026" -A x64 -T "v145,version=$ToolsetVersion" `
+    -DCMAKE_SYSTEM_VERSION="$SdkVersion" `
     -DZLIB_BUILD_SHARED=OFF `
     -DZLIB_BUILD_STATIC=ON `
     -DCMAKE_INSTALL_PREFIX="$PWD/output"

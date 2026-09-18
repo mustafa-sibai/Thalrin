@@ -5,6 +5,8 @@ param(
     [switch]$BuildCurl = $false
 )
 
+. "$PSScriptRoot/toolchain.ps1"
+
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "../..")).Path
 
 if ($Clean) {
@@ -29,7 +31,8 @@ if ($BuildOpenSSL) {
 if ($BuildCurl) {
     Write-Host "Building curl..."
     Push-Location "$RepoRoot/Thalrin/Dependencies/curl"
-    cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
+    cmake -S . -B build -G "Visual Studio 18 2026" -A x64 -T "v145,version=$ToolsetVersion" `
+        -DCMAKE_SYSTEM_VERSION="$SdkVersion" `
         -DBUILD_SHARED_LIBS=OFF `
         -DCMAKE_INSTALL_PREFIX="$PWD/output" `
         -DCMAKE_PREFIX_PATH="$RepoRoot/Thalrin/Dependencies/openssl/install;$RepoRoot/Thalrin/Dependencies/zlib/output" `
